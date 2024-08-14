@@ -10,7 +10,7 @@ public class HelloController {
     @FXML
     private TextField testInput;
     @FXML
-    protected void onHelloButtonClick() {
+    protected void onHelloButtonClick(){
         welcomeText.setText(testInput.getText());
     }
 }

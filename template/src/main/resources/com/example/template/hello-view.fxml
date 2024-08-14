@@ -7,8 +7,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.template.HelloController">
    <children>
-      <Button layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Button" />
-      <Label fx:id="welcomeText" alignment="CENTER" layoutX="286.0" layoutY="144.0" text="Label" textAlignment="CENTER" />
+      <Button layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Button"/>
+      <Label fx:id="welcomeText" alignment="CENTER" layoutX="286.0" layoutY="144.0" text="Label" textAlignment="CENTER"/>
       <TextField fx:id="testInput" layoutX="226.0" layoutY="240.0" />
    </children>
 </AnchorPane>
