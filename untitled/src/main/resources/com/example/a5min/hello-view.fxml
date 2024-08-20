@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.a5min.HelloController">
+   <children>
+      <Button fx:id="main" layoutX="275.0" layoutY="239.0" mnemonicParsing="false" onAction="#mainOnClick" text="Button" />
+      <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="129.0" layoutY="138.0" prefHeight="17.0" prefWidth="344.0" text="What is this class called?" />
+      <TextField fx:id="txtInput" layoutX="226.0" layoutY="188.0" />
+   </children>
+</AnchorPane>
