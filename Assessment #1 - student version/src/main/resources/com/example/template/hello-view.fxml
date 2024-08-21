@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.template.HelloController">
+   <children>
+      <Button layoutX="186.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleClick" text="click to see if the number is even" textFill="#dd1919" />
+      <Label fx:id="lblDisplay" layoutX="188.0" layoutY="159.0" text="display true if even and false if odd" />
+      <TextField fx:id="txtInput" layoutX="206.0" layoutY="86.0" promptText="type a number here" />
+   </children>
+</AnchorPane>
