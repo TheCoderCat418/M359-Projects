@@ -18,6 +18,9 @@ public class HelloController {
 
     @FXML
     protected void mainOnClick() {
+
+        System.out.println(Math.sqrt(-1));
+
         String a1 = "APCSA";
         String a2 = "CONANT";
         String a3 = "08/20/2024";
@@ -53,6 +56,13 @@ public class HelloController {
     }
     private boolean checkAnswer(String userInput, String answer) {
         return userInput.equals(answer);
+    }
+
+    private double mathRoundNum(double num, int places){
+        num*=Math.pow(10, places);
+        num = Math.round(num);
+        num/=Math.pow(10, places);
+        return num;
     }
 
 
