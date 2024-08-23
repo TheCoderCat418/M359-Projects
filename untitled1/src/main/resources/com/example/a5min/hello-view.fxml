@@ -7,11 +7,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.a5min.HelloController">
    <children>
-      <Button fx:id="qButton" layoutX="479.0" layoutY="200.0" mnemonicParsing="false" onAction="#mainOnClick" prefHeight="25.0" prefWidth="101.0" text="Button" />
-      <Label fx:id="title" alignment="CENTER" layoutX="479.0" layoutY="119.0" prefHeight="17.0" prefWidth="101.0" text="Quadratic" textAlignment="CENTER" />
-      <TextField fx:id="q3" layoutX="552.0" layoutY="160.0" prefHeight="25.0" prefWidth="28.0" />
-      <TextField fx:id="q2" layoutX="515.0" layoutY="160.0" prefHeight="25.0" prefWidth="28.0" />
-      <TextField fx:id="q1" layoutX="479.0" layoutY="160.0" prefHeight="25.0" prefWidth="28.0" />
-      <Label fx:id="qAnwser" alignment="CENTER" layoutX="479.0" layoutY="245.0" prefHeight="40.0" prefWidth="101.0" text="Label" />
+      <Button layoutX="479.0" layoutY="200.0" mnemonicParsing="false" onAction="#quadraticOnClick" prefHeight="25.0" prefWidth="101.0" text="Generate" />
+      <Label alignment="CENTER" layoutX="479.0" layoutY="119.0" prefHeight="17.0" prefWidth="101.0" text="Quadratic" textAlignment="CENTER" />
+      <TextField fx:id="q3" alignment="CENTER" layoutX="552.0" layoutY="160.0" prefHeight="25.0" prefWidth="28.0" promptText="c" />
+      <TextField fx:id="q2" alignment="CENTER" layoutX="515.0" layoutY="160.0" prefHeight="25.0" prefWidth="28.0" promptText="b" />
+      <TextField fx:id="q1" alignment="CENTER" layoutX="479.0" layoutY="160.0" prefHeight="25.0" prefWidth="28.0" promptText="a" />
+      <Label fx:id="qAnswer" alignment="CENTER" layoutX="479.0" layoutY="245.0" prefHeight="40.0" prefWidth="101.0" text="Click Generate" />
+      <Label alignment="CENTER" layoutX="335.0" layoutY="119.0" prefHeight="17.0" prefWidth="101.0" text="Slope &amp; midpoint" />
+      <TextField fx:id="s1" alignment="CENTER" layoutX="335.0" layoutY="160.0" prefHeight="25.0" prefWidth="50.0" promptText="(x,y)" />
+      <TextField fx:id="s2" alignment="CENTER" layoutX="386.0" layoutY="160.0" prefHeight="25.0" prefWidth="50.0" promptText="(x,y)" />
+      <Button layoutX="335.0" layoutY="200.0" mnemonicParsing="false" onAction="#slopeOnClick" prefHeight="25.0" prefWidth="101.0" text="Generate" />
+      <Label fx:id="sAnswer" alignment="CENTER" layoutX="335.0" layoutY="245.0" prefHeight="40.0" prefWidth="101.0" text="Click Generate" />
+      <Label alignment="CENTER" layoutX="199.0" layoutY="119.0" prefHeight="17.0" prefWidth="101.0" text="Random Numbers" />
+      <TextField alignment="CENTER" layoutX="199.0" layoutY="160.0" prefHeight="25.0" prefWidth="101.0" promptText="A number " />
    </children>
 </AnchorPane>
