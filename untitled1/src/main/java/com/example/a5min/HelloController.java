@@ -20,6 +20,18 @@ public class HelloController {
     private TextField s2;
     @FXML
     private Label sAnswer;
+    @FXML
+    private Label rAnswer;
+    @FXML
+    private TextField rn1;
+    @FXML
+    private TextField r1;
+    @FXML
+    private Label rdAnswer1;
+    @FXML
+    protected void roundOnClick(){
+        rdAnswer1.setText(Integer.toString((int)(Math.round(Double.parseDouble(r1.getText())))));
+    }
 
     @FXML
     protected void quadraticOnClick() {
@@ -46,6 +58,21 @@ public class HelloController {
         y1=y1+0.0;
 
         sAnswer.setText("Slope: "+ Double.toString((y2-y1))+"/"+Double.toString((x2-x1))+"\n"+"Midpoint: ("+Double.toString((x1+x2)/2)+","+Double.toString((y1+y2)/2)+")");
+    }
+    @FXML
+    protected void randomOnClick(){
+        rAnswer.setText(generateRandomNumber(Integer.parseInt(rn1.getText())));
+    }
+    private String generateRandomNumber(int number){
+        String ret = "";
+        for(int i = 0; i<3; i++){
+            int rnum = (int)Math.round(Math.random() * number+0.0);
+            ret+=rnum;
+            if(i!=2) {
+                ret += ", ";
+            }
+        }
+        return ret;
     }
     private int quadratic(int a, int b){
         return -b/2*a;

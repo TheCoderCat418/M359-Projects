@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.a5min.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.a5min.HelloController">
    <children>
       <Button layoutX="479.0" layoutY="200.0" mnemonicParsing="false" onAction="#quadraticOnClick" prefHeight="25.0" prefWidth="101.0" text="Generate" />
       <Label alignment="CENTER" layoutX="479.0" layoutY="119.0" prefHeight="17.0" prefWidth="101.0" text="Quadratic" textAlignment="CENTER" />
@@ -19,6 +19,12 @@
       <Button layoutX="335.0" layoutY="200.0" mnemonicParsing="false" onAction="#slopeOnClick" prefHeight="25.0" prefWidth="101.0" text="Generate" />
       <Label fx:id="sAnswer" alignment="CENTER" layoutX="335.0" layoutY="245.0" prefHeight="40.0" prefWidth="101.0" text="Click Generate" />
       <Label alignment="CENTER" layoutX="199.0" layoutY="119.0" prefHeight="17.0" prefWidth="101.0" text="Random Numbers" />
-      <TextField alignment="CENTER" layoutX="199.0" layoutY="160.0" prefHeight="25.0" prefWidth="101.0" promptText="A number " />
+      <TextField fx:id="rn1" alignment="CENTER" layoutX="199.0" layoutY="160.0" prefHeight="25.0" prefWidth="101.0" promptText="&gt;0" />
+      <Button layoutX="199.0" layoutY="200.0" mnemonicParsing="false" onAction="#randomOnClick" prefHeight="25.0" prefWidth="101.0" text="Generate" />
+      <Label fx:id="rAnswer" alignment="CENTER" layoutX="199.0" layoutY="245.0" prefHeight="40.0" prefWidth="101.0" text="Click Generate" wrapText="true" />
+      <Label alignment="CENTER" layoutX="71.0" layoutY="119.0" prefHeight="17.0" prefWidth="101.0" text="Round Number" />
+      <TextField fx:id="r1" alignment="CENTER" layoutX="71.0" layoutY="160.0" prefHeight="25.0" prefWidth="101.0" promptText="number" />
+      <Button layoutX="71.0" layoutY="200.0" mnemonicParsing="false" onAction="#roundOnClick" prefHeight="25.0" prefWidth="101.0" text="Generate" />
+      <Label fx:id="rdAnswer1" alignment="CENTER" layoutX="71.0" layoutY="245.0" prefHeight="40.0" prefWidth="101.0" text="Click Generate" wrapText="true" />
    </children>
 </AnchorPane>
