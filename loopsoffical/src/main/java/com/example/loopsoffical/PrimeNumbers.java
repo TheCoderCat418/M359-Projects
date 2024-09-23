@@ -1,5 +1,7 @@
 package com.example.loopsoffical;
 
+import java.util.ArrayList;
+
 public class PrimeNumbers {
     public PrimeNumbers(){
 
@@ -19,42 +21,43 @@ public class PrimeNumbers {
         }
         return true;
     }
-
-    public String getPrimeNumbers(int numPrimes){
-        String primes = "";
+    private ArrayList<Integer> primes;
+    public ArrayList<Integer> getPrimeNumbers(int numPrimes){
+        primes = new ArrayList<>();
         int num = 2;
         for(int i = 0; i<numPrimes;i++){
             while (!isPrime(num)) {
                 num++;
             }
-            primes+=num+", ";
+            primes.add(num);
             num++;
         }
         return primes;
     }
 
 
-    public String getPrimeNumbersFrom(int a, int b){
-        String primes = "";
+    public ArrayList<Integer> getPrimeNumbersFrom(int a, int b){
+        primes = new ArrayList<>();
         int num = a;
         while(num < b){
             if(isPrime(num)) {
-                primes+=num+", ";
+                primes.add(num);
             }
             num++;
         }
         return primes;
     }
 
-    public String div2Primes(int num){
-        String primes = "";
-        int div = 2;
-        while(div < num){
-            if(isPrime(num) && isPrime(div)) {
-                return "div: "+ div + " | num: "+num;
+    public boolean doesItFactorIntoTwoPrimes(int testNum){
+        ArrayList<Integer> listTestPrimes = getPrimeNumbersFrom(2,(int)(Math.sqrt(testNum)));
+        for (int i = 0; i < listTestPrimes.size(); i++) {
+            if (testNum % i == 0) {
+                if (isPrime(testNum / i)) {
+                    System.out.println(i + " , " + testNum);
+                    return true;
+                }
             }
-            num++;
         }
-        return primes;
+        return false;
     }
 }
