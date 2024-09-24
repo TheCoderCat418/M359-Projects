@@ -76,12 +76,26 @@ public class PrimeNumbers {
     }
 
     public long p(int l){
-        String t = "";
-        for(int i =0; i<l;i++){
-            t+="9";
-        }
-        ArrayList<Integer> al = getPrimeNumbersFrom(10*l, Integer.parseInt(t));
-        
+        ArrayList<Integer> al = getPrimeNumbersFrom((int)(Math.pow(10, l-1)), (int)(Math.pow(10, l)-1));
+        int randomIndex = (int)(Math.random()*al.size());
+        return al.get(randomIndex);
+    }
 
+    public int[] deletePrimes(int[] startArray){
+        int numPrimes = 0;
+        for (int i = 0; i<startArray.length;i++){
+            if(!isPrime(startArray[i])){
+                numPrimes++;
+            }
+        }
+        int[] newArr = new int[numPrimes];
+        int newIndex = 0;
+        for (int i = 0; i<startArray.length;i++){
+            if(!isPrime(startArray[i])){
+                newArr[newIndex] = startArray[i];
+                newIndex++;
+            }
+        }
+        return newArr;
     }
 }
