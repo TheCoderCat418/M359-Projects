@@ -1,8 +1,5 @@
 package com.thecodercat418;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
 
 public class MathStuffTest {
     @Test

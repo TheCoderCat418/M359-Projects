@@ -1,6 +1,7 @@
 package com.thecodercat418;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class Main {
         // }
         
         ArrayList<Integer> al = new ArrayList<>();
-        for(int i = 0; i<10;i++){
+        for(int i = 10; i>0;i--){
             al.add(i+1);
         }
         // for(Integer i : al){
@@ -21,6 +22,6 @@ public class Main {
         //     }
         // }
         MathStuff ms = new MathStuff();
-        System.out.println(ms.sortArrayList(al, false, false));
+        System.out.println(ms.gcf(7, 5));
     }
 }
