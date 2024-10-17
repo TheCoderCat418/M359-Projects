@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Person {
     private String personName;
     private double cash;
-
+    private ArrayList<IndividualStockOwned> isos = new ArrayList<>();
 
     public Person(String personName, double cash) {
         this.personName = personName;
@@ -13,6 +13,9 @@ public class Person {
     }
 
     public String buyStock(Stocks stockBought,int numBought) {
+        isos.add(new IndividualStockOwned(stockBought, numBought));
+        //DO
+        //Add to stock owned
         return "nonsense";
 
 
