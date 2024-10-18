@@ -26,9 +26,15 @@ public class HelloController {
 
 
     public void handleLstPeople(MouseEvent mouseEvent) {
-        System.out.println("test");
-        String personName  = lstPeople.getSelectionModel().getSelectedItem().toString();
-        System.out.println(personName);
+        String personName  = lstPeople.getSelectionModel().getSelectedItem().toString().split(",")[0].strip();
+        for (Person p : people) {
+            if(p.getPersonName().equals(personName)){
+                lstStocksOwned.getItems().clear();
+                for(IndividualStockOwned iso : p.getIsos()){
+                    lstStocksOwned.getItems().add(iso.toString());
+                }
+            }
+        }
 
     }
 
@@ -73,13 +79,58 @@ public class HelloController {
         for(Stocks s: stock){
             lstStocksAvailable.getItems().add(s.getStockName() + ", Current Price: " + s.getCurrentPrice() );
         }
+
     }
     @FXML
     public void handleBuy() {
-        p
+        int stockAmount = Integer.parseInt(txtAmount.getText());
+
+        String personName  = lstPeople.getSelectionModel().getSelectedItem().toString().split(",")[0].strip();
+        String stockName  = lstStocksAvailable.getSelectionModel().getSelectedItem().toString().split(",")[0].strip();
+        Stocks stocks = null;
+        Person person = null;
+        for(Stocks s : stock){
+            if(s.getStockName().equals(stockName)){
+                stocks = s;
+            }
+        }
+        for (Person p : people) {
+            if(p.getPersonName().equals(personName)){
+                person = p;
+            }
+        }
+        if(stocks == null || person == null){
+            return;
+        }
+        boolean isNew = true;
+        for(IndividualStockOwned iso : person.getIsos()){
+            if(iso.currentStock.equals(stocks)){
+                iso.addStock(stockAmount);
+                isNew = false;
+            }
+        }
+        if(isNew){
+            person.buyStock(stocks, stockAmount);
+        }
     }
     @FXML
     public void handleSell() {
+        int stockAmount = Integer.parseInt(txtAmount.getText());
+
+        String personName  = lstPeople.getSelectionModel().getSelectedItem().toString();
+        String stockName  = lstStocksAvailable.getSelectionModel().getSelectedItem().toString();
+        Stocks stocks = null;
+        Person person = null;
+        for(Stocks s : stock){
+            if(s.getStockName().equals(stockName)){
+                stocks = s;
+            }
+        }
+        for (Person p : people) {
+            if(p.getPersonName().equals(personName)){
+                person = p;
+            }
+        }
 
     }
     @FXML

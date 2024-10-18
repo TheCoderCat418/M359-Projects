@@ -24,4 +24,7 @@ public class IndividualStockOwned {
     public Stocks getCurrentStock() {
         return currentStock;
     }
+
+    @Override
+    public
 }

@@ -27,6 +27,9 @@ public class Person {
             return "nonsense";
 
     }
+    public ArrayList<IndividualStockOwned> getIsos(){
+        return isos;
+    }
 
 
     public String getPersonName() {
