@@ -25,7 +25,7 @@ public class HelloController {
     private ArrayList<Stocks> stock = new ArrayList<>();
 
 
-    public void handleLstPeople(MouseEvent mouseEvent) {
+    public void handleLstPeople() {
         String personName  = lstPeople.getSelectionModel().getSelectedItem().toString().split(",")[0].strip();
         for (Person p : people) {
             if(p.getPersonName().equals(personName)){
@@ -112,6 +112,7 @@ public class HelloController {
         if(isNew){
             person.buyStock(stocks, stockAmount);
         }
+        handleLstPeople();
     }
     @FXML
     public void handleSell() {

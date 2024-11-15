@@ -26,5 +26,7 @@ public class IndividualStockOwned {
     }
 
     @Override
-    public
+    public String toString(){
+        return currentStock.getStockName() + ", Shares: " + numowned;
+    }
 }
