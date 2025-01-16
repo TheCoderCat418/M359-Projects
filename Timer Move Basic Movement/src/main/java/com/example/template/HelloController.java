@@ -15,6 +15,7 @@ public class HelloController {
     Button[][] btn =new Button[20][20];
     private int[][] board = new int[20][20];
     private ArrayList<RedBug> redBugs = new ArrayList<>();
+    private ArrayList<BlueBug> blueBugs = new ArrayList<>();
     @FXML
     private GridPane playBoard;
     public void handleSetup(ActionEvent actionEvent) {
@@ -55,6 +56,9 @@ public class HelloController {
                     btn[i][j].setStyle("-fx-background-color: #ff0000; ");
                 }else if(board[i][j]==2){
                     btn[i][j].setStyle("-fx-background-color: #00ff00; ");
+                
+                }else if(board[i][j]==3){
+                btn[i][j].setStyle("-fx-background-color: #0000ff; ");
                 }
             }
         }
@@ -70,6 +74,12 @@ public class HelloController {
                     rb.setStartTime();
                 //}
             }
+            for(BlueBug rb : blueBugs){
+                //if(now-redBugs.get(0).getStartTime()>10000000000.0){
+                    rb.changeLocation(board);
+                    rb.setStartTime();
+                //}
+            }
                 updateScreen();
 
             }
@@ -78,6 +88,7 @@ public class HelloController {
 
     public void handleAddRedBug(ActionEvent actionEvent) {
         redBugs.add(new RedBug(5,5,board));
+        blueBugs.add(new BlueBug(10, 10, board));
         board[5][9]=2;
     }
 }

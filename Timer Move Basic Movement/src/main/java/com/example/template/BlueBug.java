@@ -1,13 +1,13 @@
 package com.example.template;
 
-public class RedBug {
+public class BlueBug {
     private int x;
     private int y;
     private long startTime;
-    public  RedBug(int x, int y, int[][] board){
+    public  BlueBug(int x, int y, int[][] board){
         this.x = x;
         this.y = y;
-        board[x][y] = 1;
+        board[x][y] = 3;
         startTime = System.nanoTime();
     }
 
@@ -51,7 +51,7 @@ public class RedBug {
         }
         
         
-        board[setx][sety] =1;
+        board[setx][sety] =3;
         board[x][y]=0;
         x = setx;
         y = sety;
