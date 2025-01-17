@@ -5,8 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+
 import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
@@ -28,7 +27,7 @@ public class HelloController {
                 playBoard.add(btn[i][j],j,i);
             }
         }
-        EventHandler z = new EventHandler<ActionEvent>() {
+        EventHandler<ActionEvent> z = new EventHandler<>() {
             @Override
             public void handle(ActionEvent event) {
                 //all button code goes here
@@ -69,10 +68,10 @@ public class HelloController {
             @Override
             public void handle(long now) {
                 for(RedBug rb : redBugs){
-                //if(now-redBugs.get(0).getStartTime()>10000000000.0){
+                if(now-redBugs.get(0).getStartTime()>100000000.0){
                     rb.changeLocation(board);
                     rb.setStartTime();
-                //}
+                }
             }
             for(BlueBug rb : blueBugs){
                 //if(now-redBugs.get(0).getStartTime()>10000000000.0){

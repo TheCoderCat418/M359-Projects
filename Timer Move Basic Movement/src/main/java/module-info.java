@@ -1,6 +1,6 @@
 module com.example.template {
-    requires javafx.controls;
-    requires javafx.fxml;
+    requires transitive javafx.controls;
+    requires transitive javafx.fxml;
     requires transitive javafx.base;
     requires transitive javafx.graphics;
 
