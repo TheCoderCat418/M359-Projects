@@ -3,7 +3,7 @@ package com.example.template;
 import javafx.scene.control.Button;
 
 public class Entity extends Tile{
-    
+    private Position toMoveTo;
 
 
     public Entity(Button linkedButton){
@@ -14,4 +14,6 @@ public class Entity extends Tile{
     public void renderRun(){ //TASKS: MOVE
 
     }
+
+    
 }
