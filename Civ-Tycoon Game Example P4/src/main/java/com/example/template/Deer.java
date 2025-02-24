@@ -17,9 +17,7 @@ public class Deer extends Animal{
         }
     }
 
-    public Location findClosestBerryPatch(ArrayList<Building> buildings){
-        return null;
-    }
+    
 
 
 }
